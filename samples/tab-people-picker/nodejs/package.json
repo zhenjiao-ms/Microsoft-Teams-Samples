@@ -22,5 +22,8 @@
     "nodemon": "^2.0.7",
     "q": "^1.5.1",
     "request": "^2.88.2"
+  },
+  "devDependencies": {
+    "@microsoft/teamsfx-run-utils": "^1.0.1-alpha.8c0ba8bd7.0"
   }
 }
