@@ -1,4 +1,4 @@
-﻿{
+{
   "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.12/MicrosoftTeams.schema.json",
   "manifestVersion": "1.12",
   "version": "1.0.0",
@@ -27,19 +27,19 @@
     {
       "entityId": "homeTab",
       "name": "Home",
-      "contentBotId": "${{TEAMS_APP_ID}}",
+      "contentBotId": "${{BOT_ID}}",
       "scopes": [ "personal" ]
     },
     {
       "entityId": "youtubeTab",
       "name": "Youtube",
-      "contentBotId": "${{TEAMS_APP_ID}}",
+      "contentBotId": "${{BOT_ID}}",
       "scopes": [ "personal" ]
     }
   ],
   "permissions": [ "identity", "messageTeamMembers" ],
   "validDomains": [
-    "${{TAB_DOMAIN}}",
+    "${{BOT_DOMAIN}}",
     "*.youtube.com",
     "token.botframework.com"
   ]
