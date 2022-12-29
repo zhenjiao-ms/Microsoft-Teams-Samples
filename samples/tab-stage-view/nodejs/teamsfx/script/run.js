@@ -14,14 +14,11 @@ async function run() {
   const envs = await utils.loadEnv(args[0], args[1]);
 
   // set up environment variables required by teamsfx
-  process.env.BROWSER = "none";
-  process.env.HTTPS = true;
-  process.env.PORT = 3978;
-  process.env.SSL_CRT_FILE = envs.SSL_CRT_FILE;
-  process.env.SSL_KEY_FILE = envs.SSL_KEY_FILE;
+  process.env.BOT_ID = envs.BOT_ID;
+  process.env.BOT_PASSWORD = envs.SECRET_BOT_PASSWORD;
 
   // launch service locally by executing npm command
-  cp.spawn(/^win/.test(process.platform) ? "npm.cmd" : "npm", ["run", "dev"], {
+  cp.spawn(/^win/.test(process.platform) ? "npm.cmd" : "npm", ["run", "watch"], {
     stdio: "inherit",
   });
 }

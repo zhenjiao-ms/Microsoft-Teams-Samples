@@ -1,8 +1,8 @@
-﻿{
+{
   "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.12/MicrosoftTeams.schema.json",
   "manifestVersion": "1.12",
   "version": "1.0.0",
-  "id": "<<MANIFEST-ID>>",
+  "id": "${{TEAMS_APP_ID}}",
   "packageName": "com.microsoft.teams.tabstageview",
   "developer": {
     "name": "Microsoft",
@@ -33,14 +33,14 @@
         "channelTab"
       ],
       "name": "Stage View",
-      "contentUrl": "https://<<BASE-URL>>/tab",
-      "websiteUrl": "https://<<BASE-URL>>/tab",
-      "searchUrl":  "https://<<BASE-URL>>/tab"
+      "contentUrl": "https://${{BOT_DOMAIN}}/tab",
+      "websiteUrl": "https://${{BOT_DOMAIN}}/tab",
+      "searchUrl":  "https://${{BOT_DOMAIN}}/tab"
     }
   ],
   "bots": [
     {
-      "botId": "<<YOUR-MICROSOFT-APP-ID>>",
+      "botId": "${{BOT_ID}}",
       "scopes": [
         "team",
         "personal",
@@ -52,7 +52,7 @@
   "accentColor": "#60A18E",
   "permissions": [ "identity", "messageTeamMembers" ],
   "validDomains": [
-    "<<DOMAIN-NAME>>",
+    "${{BOT_DOMAIN}}",
     "token.botframework.com"
   ]
 }

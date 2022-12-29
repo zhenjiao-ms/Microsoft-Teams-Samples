@@ -4,6 +4,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon --inspect=9239 --signal SIGINT server.js",
     "start": "node server.js"
   },
   "author": "",
@@ -19,11 +20,11 @@
     "ejs": "^3.1.6",
     "express": "^4.17.1",
     "node-fetch": "^2.6.1",
-    "nodemon": "^2.0.7",
     "q": "^1.5.1",
     "request": "^2.88.2"
   },
   "devDependencies": {
-    "@microsoft/teamsfx-run-utils": "^1.0.1-alpha.8c0ba8bd7.0"
+    "@microsoft/teamsfx-run-utils": "^1.0.1-alpha.8c0ba8bd7.0",
+    "nodemon": "^2.0.20"
   }
 }
